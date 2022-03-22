@@ -10,6 +10,7 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.2.8",
+    "fs": "^0.0.1-security",
     "next": "latest",
     "react": "17.0.2",
     "react-app-protect": "^1.0.8",

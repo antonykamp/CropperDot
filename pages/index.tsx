@@ -1,7 +1,36 @@
-import { Text } from "@chakra-ui/react"
+import { Flex } from '@chakra-ui/react'
+import { readdirSync } from "fs";
+import Image from "next/image";
+import Link from "next/link";
+import path from "path";
 
-export default function App(){
+export default function App({ files }){
     return (
-        <Text>Hwllo World</Text>
+        <Flex direction="row" wrap="wrap">
+        {files.map((file, index) => {
+            const completePath = path.join(
+                process.cwd(),
+                "/images/",
+                file
+              );
+            return (
+                <Flex direction="column">
+                    <Link href={{pathname: "image", query: {fileindex: index}}}>
+                        <a>
+                            <Image width="128" height="128" src={completePath}></Image>
+                        </a>
+                    </Link>
+                </Flex>
+            )
+        })}
+        </Flex>
     )
 }
+
+export async function getStaticProps() {
+    var files = readdirSync("./public/images")
+    return {
+      props: {files: files}
+    }
+  }
+  
