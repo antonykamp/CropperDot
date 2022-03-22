@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 import { readdirSync } from "fs";
 import Image from 'next/image';
 import Link from "next/link";
@@ -18,6 +18,7 @@ export default function App({ files }){
                     <Link href={{pathname: "image", query: {fileindex: index}}}>
                         <a>
                             <Image key={file} width="128" height="128" src={completePath}></Image>
+                            <Text>{file}</Text>
                         </a>
                     </Link>
                 </Flex>
