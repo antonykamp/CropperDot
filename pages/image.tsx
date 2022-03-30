@@ -26,9 +26,13 @@ export default function Images({files}){
     const downloadCrop = async() => {
         const imageElement: any = cropperRef?.current;
         const cropper: any = imageElement?.cropper;
+
+        const json = JSON.stringify(cropper.getData(true));
+        const blob = new Blob([json],{type:'application/json'});
+        const href = URL.createObjectURL(blob);
         var link = document.createElement("a");
-        link.download = file;
-        link.href = cropper.getCroppedCanvas().toDataURL();
+        link.href = href
+        link.download = file.split(".")[0] + ".json"
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
