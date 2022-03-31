@@ -18,7 +18,7 @@
     "react-app-protect": "^1.0.8",
     "react-cropper": "^2.1.8",
     "react-dom": "17.0.2",
-    "sass": "^1.49.9"
+    "sass": "^1.49.10"
   },
   "devDependencies": {
     "@types/node": "^14.18.12",
