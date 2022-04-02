@@ -8,7 +8,7 @@ print(sys.argv)
 name = sys.argv[1].split("/")[1].split(".")[0]
 print("loaded {}".format(name))
 for i in range(len(data)):
-    if label[i] == 2:
+    if label[i] == 1:
         d = data[i]
         img = plt.imshow(d, cmap='bwr')
         plt.axis('off')
