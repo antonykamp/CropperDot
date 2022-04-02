@@ -17,7 +17,7 @@ export default function App({ files }){
                 <Flex direction="column">
                     <Link href={{pathname: "image", query: {fileindex: index}}}>
                         <a>
-                            <Image key={file} width="128" height="128" src={completePath}></Image>
+                            <Image key={file} width="256" height="256" src={completePath}></Image>
                             <Text>{file}</Text>
                         </a>
                     </Link>
