@@ -4,7 +4,7 @@ import sys
 
 data = numpy.load(sys.argv[1], allow_pickle=True)
 i = 0
-name = sys.argv[1].split("\\")[2].split(".")[0]
+name = sys.argv[1].split("/")[2].split(".")[0]
 print("loaded {}".format(name))
 for d in data:
     img = plt.imshow(d, cmap='bwr')
