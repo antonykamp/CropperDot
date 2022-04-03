@@ -28,7 +28,3 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# big data sets
-files-npy/revised_imgs.npy
-files-npy/revised_labels_array.npy
